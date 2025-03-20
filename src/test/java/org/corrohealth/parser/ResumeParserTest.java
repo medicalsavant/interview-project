@@ -1,41 +1,41 @@
 package org.corrohealth.parser;
 
+import org.corrohealth.models.Candidate;
+import org.corrohealth.parser.ResumeParser;
 import org.junit.jupiter.api.Test;
+
+import java.io.File;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ResumeParserTest {
 
   @Test
-  public void testExtractPhoneNumber() {
-    // Test with a valid phone number with +
-    String input = "+1234567890";
-    String expected = "1234567890";
-    String actual = ResumeParser.extractPhoneNumber(input);
-    assertEquals(expected, actual);
+  public void testExtractTextFromTxt() {
+    // Create a sample input file
+    File inputFile = new File("src/test/resources/sample_input.txt");
 
-    // Test with a valid phone number without +
-    input = "1234567890";
-    expected = null; // Since the regex expects a + sign
-    actual = ResumeParser.extractPhoneNumber(input);
-    assertEquals(expected, actual);
+    // Call the method to test
+    List<Candidate> candidates = ResumeParser.extractTextFromTxt(inputFile);
 
-    // Test with an invalid phone number
-    input = "+abc123";
-    expected = null;
-    actual = ResumeParser.extractPhoneNumber(input);
-    assertEquals(expected, actual);
+    // Verify the results
+    assertNotNull(candidates);
+    assertEquals(3, candidates.size());
 
-    // Test with an empty string
-    input = "";
-    expected = null;
-    actual = ResumeParser.extractPhoneNumber(input);
-    assertEquals(expected, actual);
+    Candidate candidate1 = candidates.get(0);
+    assertEquals("Steve Smith", candidate1.getName());
+    assertEquals("Java, Spring, Hibernate", String.join(", ", candidate1.getSkills()));
+    assertEquals(5, candidate1.getExperience());
 
-    // Test with a null input
-    input = null;
-    expected = null;
-    actual = ResumeParser.extractPhoneNumber(input);
-    assertEquals(expected, actual);
+    Candidate candidate2 = candidates.get(1);
+    assertEquals("John Doe", candidate2.getName());
+    assertEquals("Python, Numpy, MangoDB", String.join(", ", candidate2.getSkills()));
+    assertEquals(5, candidate2.getExperience());
+
+    Candidate candidate3 = candidates.get(2);
+    assertEquals("Sara Smith", candidate3.getName());
+    assertEquals("AWS, Dockers, Kubernetes", String.join(", ", candidate3.getSkills()));
+    assertEquals(5, candidate3.getExperience());
   }
 }

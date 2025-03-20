@@ -21,22 +21,17 @@ public class ResumeParser {
     // Read resume text from a .txt file
     return extractTextFromTxt(resumeFile);
 
-
   }
 
   // Extract text from a TXT file
   public static List<Candidate> extractTextFromTxt(File file) {
-    //  StringBuilder text = new StringBuilder();
     List<Candidate> candidateList = new ArrayList<>();
     try (Scanner scanner = new Scanner(file)) {
       while (scanner.hasNextLine()) {
-        //   text.append(scanner.nextLine()).append("\n");
         String line = scanner.nextLine();
         try {
-
           String[] words = line.split(",");
           if (words.length >= 4) {
-
             Candidate candidate = new Candidate();
             candidate.setName(words[0].trim());
             candidate.setTitle(words[1].trim());
@@ -46,11 +41,10 @@ public class ResumeParser {
             List<String> skillList = new ArrayList<>();
             skillList.addAll(Arrays.asList(skills));
             candidate.setSkills(skillList);
-
             if (words.length == 7) {
               PersonalDetails personalDetails = new PersonalDetails();
               personalDetails.setEmail(words[4].trim());
-              personalDetails.setPhone(extractPhoneNumber(words[5].trim()));
+              personalDetails.setPhone((words[5].trim()));
               personalDetails.setLocation(words[6].trim());
               candidate.setPersonalDetails(personalDetails);
             }
@@ -65,28 +59,6 @@ public class ResumeParser {
       System.out.println("Error: Resume file not found.");
     }
     return candidateList;
-  }
-
-  public static String extractPhoneNumber(String input) {
-    // Define the regex pattern to match the phone number
-
-    try {
-      String regex = "\\+([0-9]+)";
-
-      Pattern pattern = Pattern.compile(regex);
-      Matcher matcher = pattern.matcher(input);
-
-      // Find and extract the phone number without the +
-      if (matcher.find()) {
-        return matcher.group(1);
-      } else {
-        return null; // or handle the case where no match is found
-      }
-    } catch (Exception e) {
-      System.out.println("Error: Unable to extract phone number.");
-
-    }
-    return null;
   }
 
 

@@ -1,27 +1,14 @@
 
 Candidate List:
 
-Candidate Name: Steve Smith Phone: 1234567890
 Candidate Name: John Doe Phone: 1234567890
+Candidate Name: Steve Smith Phone: 1234567890
 Candidate Name: Sara Smith Phone: 1234567890
 
   ---------------------------------------------------------------
 
  Checking Job Matches : 
 
-Candidate Name: Steve Smith
-
- No Match for : Python Developer
-
- Missing Skills: [Python, Numpy, MangoDB]
-
- Matched Successfully for : Java Full Stack Developer
-
- No Match for : Senior Cloud Architect
-
- Missing Skills: [Dockers, Kubernetes]
-
- ---------------------------------------------------------------
 Candidate Name: John Doe
 
  Matched Successfully for : Python Developer
@@ -33,6 +20,19 @@ Candidate Name: John Doe
  No Match for : Senior Cloud Architect
 
  Missing Skills: [AWS, Dockers, Kubernetes]
+
+ ---------------------------------------------------------------
+Candidate Name: Steve Smith
+
+ No Match for : Python Developer
+
+ Missing Skills: [Python, Numpy, MangoDB]
+
+ Matched Successfully for : Java Full Stack Developer
+
+ No Match for : Senior Cloud Architect
+
+ Missing Skills: [Dockers, Kubernetes]
 
  ---------------------------------------------------------------
 Candidate Name: Sara Smith
