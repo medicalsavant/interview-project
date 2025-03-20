@@ -8,16 +8,6 @@ public class Candidate {
   private List<String> skills;
   private int experience;
 
-  private PersonalDetails personalDetails;
-
-  public PersonalDetails getPersonalDetails() {
-    return personalDetails;
-  }
-
-  public void setPersonalDetails(PersonalDetails personalDetails) {
-    this.personalDetails = personalDetails;
-  }
-
   public String getName() {
     return name;
   }
@@ -52,7 +42,7 @@ public class Candidate {
 
   @Override
   public String toString() {
-    return "Candidate Name: " + name + " Phone: " + personalDetails.getPhone();
+    return "Candidate Name: " + name;
   }
 
 

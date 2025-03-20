@@ -1,9 +1,9 @@
 
 Candidate List:
 
-Candidate Name: Steve Smith Phone: 1234567890
-Candidate Name: John Doe Phone: 1234567890
-Candidate Name: Sara Smith Phone: 1234567890
+Candidate Name: Steve Smith
+Candidate Name: John Doe
+Candidate Name: Sara Smith
 
   ---------------------------------------------------------------
 
@@ -15,16 +15,20 @@ Candidate Name: Steve Smith
 
  Missing Skills: [Python, Numpy, MangoDB]
 
- Matched Successfully for : Java Full Stack Developer
+ No Match for : Java Full Stack Developer
+
+ Missing Skills: [Java, Spring, Hibernate, AWS, SQL, React.js, Spring-Boot]
 
  No Match for : Senior Cloud Architect
 
- Missing Skills: [Dockers, Kubernetes]
+ Missing Skills: [AWS, Dockers, Kubernetes]
 
  ---------------------------------------------------------------
 Candidate Name: John Doe
 
- Matched Successfully for : Python Developer
+ No Match for : Python Developer
+
+ Missing Skills: [Python, Numpy, MangoDB]
 
  No Match for : Java Full Stack Developer
 
@@ -43,8 +47,12 @@ Candidate Name: Sara Smith
 
  No Match for : Java Full Stack Developer
 
- Missing Skills: [Java, Spring, Hibernate, SQL, React.js, Spring-Boot]
+ Missing Skills: [Java, Spring, Hibernate, AWS, SQL, React.js, Spring-Boot]
 
- Matched Successfully for : Senior Cloud Architect
+ No Match for : Senior Cloud Architect
+
+ Missing Skills: [AWS, Dockers, Kubernetes]
 
  ---------------------------------------------------------------
+
+ No suitable jobs found.
