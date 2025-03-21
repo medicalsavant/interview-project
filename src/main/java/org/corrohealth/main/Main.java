@@ -30,10 +30,13 @@ public class Main {
     fileOut.println("\nCandidate List:\n");
     candidate.forEach(fileOut::println);
 
-    fileOut.println("\n  ---------------------------------------------------------------");
+    fileOut.println("---------------------------------------------------------------");
 
     fileOut.println("\n Checking Job Matches : \n");
+    fileOut.println("---------------------------------------------------------------");
     JobMatcher.matchJobs(candidate, jobs);
+
+
 
 
   }

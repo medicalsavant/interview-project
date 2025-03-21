@@ -48,7 +48,7 @@ public class ResumeParser {
     } catch (FileNotFoundException e) {
       System.out.println("Error: Resume file not found.");
     }
-    return candidateList;
+    return null;
   }
 
 }
