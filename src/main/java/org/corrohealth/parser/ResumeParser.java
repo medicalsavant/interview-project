@@ -33,7 +33,7 @@ public class ResumeParser {
             candidate.setName(words[0].trim());
             candidate.setTitle(words[1].trim());
             candidate.setExperience(Integer.parseInt(words[2].trim()));
-            String skillListCommaSeparated = words[4].trim();
+            String skillListCommaSeparated = words[3].trim();
             String[] skills = skillListCommaSeparated.split("\\s");
             List<String> skillList = new ArrayList<>();
             skillList.addAll(Arrays.asList(skills));
@@ -48,7 +48,7 @@ public class ResumeParser {
     } catch (FileNotFoundException e) {
       System.out.println("Error: Resume file not found.");
     }
-    return null;
+    return candidateList;
   }
 
 }
