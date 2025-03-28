@@ -34,14 +34,13 @@ public class JobMatcher {
             if (experienceMismatch) {
               fileOut.println("\n Requires at least " + job.getMinExperience() + " years experience, but candidate has " + candidate.getExperience() + " years experience"); // Line 24
             }
-
           }
 
           if (missingSkills.isEmpty() && !experienceMismatch) {
             anyMatch = true;
           }
         }
-        fileOut.println("\n ---------------------------------------------------------------");
+        fileOut.println("\n---------------------------------------------------------------");
       }
 
       if (!anyMatch) {
